@@ -6,5 +6,13 @@ import { Component } from "@angular/core";
   styleUrls: ["./servers.component.css"]
 })
 export class ServersComponent {
+  allowServerCreation: boolean = false;
 
+  constructor() {}
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.allowServerCreation = true;
+    }, 2000);
+  }
 }
