@@ -1,5 +1,5 @@
 <section>
-  <input type="text" class="form-control" (input)="updateServerName($event)">
+  <input type="text" class="form-control" [(ngModel)]="serverName">
   <p class="my-2">{{ serverName ? "Name: " + serverName  :  "Please, provide a name for the server." }}</p>
   <button class="btn btn-primary" [disabled]="!allowServerCreation" (click)="createServer()">Add a new server</button>
   <p class="my-2">{{ serverCreationStatus }}</p>
